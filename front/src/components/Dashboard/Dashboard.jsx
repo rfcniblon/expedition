@@ -8,11 +8,11 @@ class Dashboard extends Component {
     }
     render() { 
         return (
-            <div className="bla">
+            <div className="blabla">
             
            
 
-            <Footer />
+            
            
         </div>
          );
