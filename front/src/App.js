@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route, Redirect } from "react-router-dom";
 import Evenement from "./components/Evenement/Evenement";
 import Login from './components/Admin/Login';
-
+import Navbar from './components/Navbar/Navbar'
 import Panier from './components/Panier/Panier';
 import AdminPage from './components/Admin/AdminPage';
 import Contact from "./components/Contact/Contact";
@@ -32,6 +32,7 @@ class App extends React.Component {
     return (
       <>
         {redirectToAdminPage && <Redirect to="/admin" />}
+        <Navbar />
         <Switch>
           <Route exact path="/panier" component={Panier} /> 
           <Route path="/evenement" component={Evenement} /> 
