@@ -9,7 +9,7 @@ class Contact extends Component {
     render() { 
         return (
              <div>
-            <p>azertyuaaaaaa</p>
+            
             </div>
          );
     }

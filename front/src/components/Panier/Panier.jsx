@@ -9,7 +9,7 @@ class Panier extends Component {
     render() { 
         return (
              <div>
-            <p>azertyu</p>
+            
             </div>
          );
     }
