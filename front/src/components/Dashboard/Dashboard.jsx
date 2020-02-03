@@ -1,41 +1,72 @@
 import React, { Component } from 'react';
 import './Dashboard.css';
 import '../Css/Liens.css'
+import Events from "../Evenement/Evenement/Evenement"
+const SERVER_ADDRESS = process.env.REACT_APP_SERVER_ADDRESS;
+
 class Dashboard extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            events: []
+        }
+
+        
+
     }
+componentDidMount = () => {
+            fetch(SERVER_ADDRESS + '/event')
+                .then(res => res.json())
+                .then(res => this.setState({ events: res }))
+        }
     render() {
         return (
             <div className="blabla">
 
-                <h1>
-                    <span>T</span>
-                    <span>h</span>
-                    <span>e</span>
-                    <span>c</span>
-                    <span>i</span>
-                    <span>r</span>
-                    <span>c</span>
-                    <span>l</span>
-                    <span>e</span>
-                    <span>o</span>
-                    <span>f</span>
-                    <span>t</span>
-                    <span>h</span>
-                    <span>e</span>
-                    <span>W</span>
-                    <span>E</span>
-                    <span>E</span>
-                    <span>D</span>
+                <h1 className="centre_titre">
+                    <span className="rainbow">T</span>
+                    <span className="rainbow">h</span>
+                    <span className="rainbow">e</span>
+                    <span className="rainbow">c</span>
+                    <span className="rainbow">i</span>
+                    <span className="rainbow">r</span>
+                    <span className="rainbow">c</span>
+                    <span className="rainbow">l</span>
+                    <span className="rainbow">e</span>
+                    <span className="rainbow">o</span>
+                    <span className="rainbow">f</span>
+                    <span className="rainbow">t</span>
+                    <span className="rainbow">h</span>
+                    <span className="rainbow">e</span>
+                    <span className="rainbow">W</span>
+                    <span className="rainbow">E</span>
+                    <span className="rainbow">E</span>
+                    <span className="rainbow">D</span>
                 </h1>
-
-                
-
                     <p className="orientation">¡ ǝɹnʇıoʌ ǝp snld ɐ,u oıloƃ</p>
-                </div>
 
+  <div className=" rainbow block-event">
+                    <div className="title-center">
+                        <strong className="rainbow title-event">Nos Evenements</strong>
+                    </div>                                                                                    
+                    <div className="rainbow row wi-12 max-wi-1000 justify-content-center">
+                        {this.state.events.map((event) => (
+                            <Events
+                                name={event.name}
+                                photo={event.photo}
+                                alt={event.alt}
+                                artiste={event.artiste}
+                                date={event.date}
+                                description={event.description}
+                                nombre={event.nombre}  
+                            />
+                        ))}
+                    </div>
+                </div>
+                <div className="sticky-footer">
+
+                </div>
+</div>
         );
     }
 }
