@@ -1,0 +1,200 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Nunito', sans-serif;
+}
+
+.bla a {
+    color: white;
+}
+
+/* header */
+
+.nomlogonav, .nomlogonav span {
+    justify-content: center;
+    text-align: center;
+}
+
+.bla {
+    background-color: green;
+    width: 100%;
+    z-index: 999;
+    height: 70px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+}
+
+.headers {
+    font-family: 'Play';
+    height: 70px;
+}
+
+.headers ul {
+    z-index: 99999;
+    margin-left: 60%;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: green;
+}
+
+.headers li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.headers li a:hover {
+    color: red;
+    background-color: yellow;
+    
+}
+
+.headers .brandlogo {
+    display: block;
+    float: left;
+    padding: 10px 20px 0 15px;
+    height: 70px;
+}
+
+.headers .brand {
+    display: block;
+    float: left;
+    font-size: 1.5em;
+    padding: 15px 10px;
+    text-decoration: none;
+}
+
+/* menu */
+
+.headers .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    text-align: center;
+    position: relative;
+    
+}
+
+.menu{
+    bottom: 10px;
+}
+
+/* menu icon */
+
+.headers .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.headers .menu-icon .navicon {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.headers .menu-icon .navicon:before, .headers .menu-icon .navicon:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.headers .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.headers .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.headers .menu-btn {
+    display: none;
+}
+
+.headers .menu-btn:checked~.menu {
+    max-height: 240px;
+}
+
+.headers .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.headers .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.headers .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.headers .menu-btn:checked~.menu-icon:not(.steps) .navicon:before, .headers .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/*points de bascule*/
+
+@media (min-width: 992px) {
+    .headers li {
+        float: left;
+    }
+    .headers li a {
+        padding: 20px 30px;
+        
+    }
+    .headers .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .headers .menu-icon {
+        display: none;
+    }
+    .dispa {
+        display: none;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .headers .menu a {
+        font-size: 2em;
+    }
+    .headers .brand {
+        display: none;
+    }
+
+    .dispa {
+        margin-left: 15px;
+    }
+}
+
+@media (min-width: 576px) and (max-width:991.98px) {
+    .header .menu a {
+        font-size: 1.5em;
+    }
+   
+    .dispa {
+        margin-left: 15px;
+    }
+    .lealign {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px 7px!important;
+    }
+}
