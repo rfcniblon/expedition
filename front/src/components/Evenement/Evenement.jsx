@@ -9,7 +9,7 @@ class Evenement extends Component {
     render() { 
         return (
              <div>
-            <p>azertyu</p>
+            
             </div>
          );
     }

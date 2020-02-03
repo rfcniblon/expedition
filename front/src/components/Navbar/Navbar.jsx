@@ -31,7 +31,6 @@ class Navbar extends Component {
                 </header>
             </nav>
             
-             <div className="titre_onduletonbody"> Rasta Man</div>
             </div>
            
          );
