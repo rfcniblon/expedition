@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 
+
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -9,7 +10,7 @@ class Login extends Component {
     render() { 
         return (
              <div>
-            <p>azertyu</p>
+          
             </div>
          );
     }

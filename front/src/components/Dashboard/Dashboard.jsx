@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Footer from '../Footer/Footer';
+
 
 class Dashboard extends Component {
     constructor(props) {
@@ -10,9 +10,7 @@ class Dashboard extends Component {
         return (
             <div className="bla">
             
-           
-
-            <Footer />
+         
            
         </div>
          );
