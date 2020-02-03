@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import "./Footer.css";
 
 class Footer extends Component {
     constructor(props) {
@@ -9,9 +9,8 @@ class Footer extends Component {
     render() {
         return (
             <div>
-                <footer className="page-footer font-small blue-grey lighten-5">
-                    {/* <div style="background-color: #21d192;"> */}
-                    <div >
+                <footer className="page-footer font-small blue-grey lighten-5 color-footer">
+                    <div className="color-footer" >
                         <div className="container">
                             <div className="row py-4 d-flex align-items-center">
                                 <div className="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
