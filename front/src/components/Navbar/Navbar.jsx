@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 
-class Accueil extends Component {
+class Navbar extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
@@ -15,4 +15,4 @@ class Accueil extends Component {
     }
 }
  
-export default Accueil;
+export default Navbar;
