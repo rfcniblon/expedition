@@ -17,7 +17,7 @@ class Navbar extends Component {
                     <a href="/" className="brandlogo">
                         <div className="nomlogonav row">
                             
-                            <img className="rasta" src="./images/simpson.png"></img>
+                            <img className="rasta" src="./images/simpson.png" alt="img_rasat"></img>
                         </div>
                     </a>
                     <input className="menu-btn" type="checkbox" id="menu-btn" />
