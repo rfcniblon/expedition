@@ -7,6 +7,7 @@ import Panier from './components/Panier/Panier';
 import AdminPage from './components/Admin/AdminPage';
 import Contact from "./components/Contact/Contact";
 import Dashboard from "./components/Dashboard/Dashboard";
+import Footer from "./components/Footer/Footer";
 
 class App extends React.Component {
   constructor(props) {
@@ -43,6 +44,7 @@ class App extends React.Component {
           {/* <Route exact path="/login" component={() => <Login updateFunction={this.updateLogin} />} /> */}
          {/* {isLogged ? <Route exact path="/admin" component={AdminPage} /> : <Redirect to="/" />} */} */}
         </Switch>
+        <Footer/>
       </>
     )
   }
