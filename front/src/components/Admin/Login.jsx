@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import Footer from '../Footer/Footer';
 
 class Login extends Component {
     constructor(props) {
@@ -8,9 +8,13 @@ class Login extends Component {
     }
     render() { 
         return (
-             <div>
-            <p>azertyu</p>
-            </div>
+            <div className="blabla1">
+            
+           
+
+            
+           
+        </div>
          );
     }
 }
