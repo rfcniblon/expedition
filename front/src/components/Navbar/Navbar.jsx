@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
-import './Navbar.css'
-
+import './Navbar.css';
+import '../Css/Liens.css';
 
 class Navbar extends Component {
     constructor(props) {
@@ -24,16 +24,16 @@ class Navbar extends Component {
                     <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
                     
                     <ul className="menu">
-                        <li><a href="/Evenement">Evenement</a></li>
-                        <li><a href="/login">Login</a></li>
-                        <li><a href="/Panier">Panier</a></li>
+                        <li><a className="rainbow" href="/Evenement">Evenement</a></li>
+                        <li><a className="rainbow" href="/login">Login</a></li>
+                        <li><a className="rainbow" href="/Panier">Panier</a></li>
                     </ul>
                 </header>
             </nav>
-
-            <p>azertyu</p>
-
+            
+             <div className="titre_onduletonbody"> Rasta Man</div>
             </div>
+           
          );
     }
 }
