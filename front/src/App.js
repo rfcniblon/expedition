@@ -1,26 +1,49 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route, Redirect } from "react-router-dom";
+import Evenement from "./components/Evenement/Evenement";
+import Login from './components/Admin/Login';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Panier from './components/Panier/Panier';
+import AdminPage from './components/Admin/AdminPage';
+import Contact from "./components/Contact/Contact";
+import Dashboard from "./components/Dashboard/Dashboard";
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLogged: false,
+      redirectToAdminPage: false,
+    };
+  }
+
+  // fonction pour mettre à jour isLogged et redirectToAdminPage dans le state de App.js,
+  // cette fonction est passée en props au composant LoginPage pour que ce même composant puisse déclencher cette fonction
+  updateLogin = () => {
+    this.setState({
+      isLogged: true,
+      redirectToAdminPage: true
+    });
+
+  };
+
+  render() {
+    const { isLogged, redirectToAdminPage } = this.state;
+    return (
+      <>
+        {redirectToAdminPage && <Redirect to="/admin" />}
+        <Switch>
+          <Route exact path="/panier" component={Panier} /> 
+          <Route path="/evenement" component={Evenement} /> 
+          <Route path="/contact" component={Contact} />
+          <Route path="/admin" component={AdminPage} />
+          {/* <Route path="/admin" component={AdminPage} /> */}
+          {/* <Route exact path="/login" component={() => <Login updateFunction={this.updateLogin} />} /> */}
+         {/* {isLogged ? <Route exact path="/admin" component={AdminPage} /> : <Redirect to="/" />} */} */}
+        </Switch>
+      </>
+    )
+  }
 }
 
 export default App;

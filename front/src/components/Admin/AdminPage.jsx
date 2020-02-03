@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 
-class Adminpage extends Component {
+class AdminPage extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
@@ -13,4 +13,4 @@ class Adminpage extends Component {
     }
 }
  
-export default Adminpage;
+export default AdminPage;
