@@ -40,6 +40,7 @@ class App extends React.Component {
           <Route path="/evenement" component={Evenement} /> 
           <Route path="/contact" component={Contact} />
           <Route path="/admin" component={AdminPage} />
+          <Route path="/login" component={Login} />
           {/* <Route path="/admin" component={AdminPage} /> */}
           {/* <Route exact path="/login" component={() => <Login updateFunction={this.updateLogin} />} /> */}
          {/* {isLogged ? <Route exact path="/admin" component={AdminPage} /> : <Redirect to="/" />} */} */}
