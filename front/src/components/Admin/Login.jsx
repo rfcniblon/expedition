@@ -1,8 +1,5 @@
 import React from "react";
-import Navbar from '../Navbar/Navbar';
-import Footer from '../Footer/Footer';
 import './Login.css';
-
 const SERVER_ADDRESS = process.env.REACT_APP_SERVER_ADDRESS;
 
 class Login extends React.Component {
@@ -58,12 +55,12 @@ class Login extends React.Component {
     render() {
         const { username, password } = this.state;
         return (
-            <div className="sticky-wrap color-center">
-                {/* <Navbar /> */}
-                <div className="block-login ">
+            <div className="sticky-wrap">
+              
+                <div className="block-login">
 
 
-                    <form className="block-form-login ">
+                    <form className="block-form-login">
                         <div className="center-connexion"><strong>Connexion administrateur</strong></div>
                         <label className="label-login">
 
@@ -102,7 +99,7 @@ class Login extends React.Component {
 
                 </div>
                 <div className="sticky-footer">
-                    {/* <Footer /> */}
+                   
                 </div>
             </div>
         );

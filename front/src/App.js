@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route, Redirect } from "react-router-dom";
-import Evenement from "./components/Evenement/Evenement";
+import DisplayEvent from "./components/Evenement/DisplayEvenement";
 import Login from './components/Admin/Login';
 import Navbar from './components/Navbar/Navbar'
 import Panier from './components/Panier/Panier';
@@ -37,13 +37,13 @@ class App extends React.Component {
         <Switch>
         <Route exact path="/" component={Dashboard} /> 
           <Route exact path="/panier" component={Panier} /> 
-          <Route path="/evenement" component={Evenement} /> 
+          <Route path="/evenement" component={DisplayEvent} /> 
           <Route path="/contact" component={Contact} />
           <Route path="/admin" component={AdminPage} />
-          <Route path="/login" component={Login} />
+          {/* <Route path="/login" component={Login} /> */}
           {/* <Route path="/admin" component={AdminPage} /> */}
-          {/* <Route exact path="/login" component={() => <Login updateFunction={this.updateLogin} />} /> */}
-         {/* {isLogged ? <Route exact path="/admin" component={AdminPage} /> : <Redirect to="/" />} */} */}
+           <Route exact path="/login" component={() => <Login updateFunction={this.updateLogin} />} /> 
+          {isLogged ? <Route exact path="/admin" component={AdminPage} /> : <Redirect to="/" />} 
         </Switch>
         <Footer/>
       </>
