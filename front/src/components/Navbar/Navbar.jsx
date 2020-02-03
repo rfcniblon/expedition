@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+
 import './Navbar.css'
+
 
 class Navbar extends Component {
     constructor(props) {
@@ -9,6 +11,7 @@ class Navbar extends Component {
     render() { 
         return (
              <div>
+
             <nav className="bla">
                 <header className="headers">
                     <a href="/" className="brandlogo">
@@ -27,6 +30,9 @@ class Navbar extends Component {
                     </ul>
                 </header>
             </nav>
+
+            <p>azertyu</p>
+
             </div>
          );
     }

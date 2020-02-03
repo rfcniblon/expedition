@@ -34,6 +34,7 @@ class App extends React.Component {
         {redirectToAdminPage && <Redirect to="/admin" />}
         <Navbar />
         <Switch>
+        <Route exact path="/" component={Dashboard} /> 
           <Route exact path="/panier" component={Panier} /> 
           <Route path="/evenement" component={Evenement} /> 
           <Route path="/contact" component={Contact} />
