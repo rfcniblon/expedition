@@ -9,80 +9,80 @@ router.use(parser.urlencoded({
     extended:true
 }));
 
-//récupération de l'intégralité de la Table cards
-router.get('/cards', (req, res) => {
-    connection.query('SELECT * FROM cards',
+//récupération de l'intégralité de la Table evenement
+router.get('/evenement', (req, res) => {
+    connection.query('SELECT * FROM evenement',
       (err, results) => {
         if (err) {
           console.log('Dommage!');
         } else {
-          console.log('Recuperation de la table cards recupéré avec succés');
+          console.log('Recuperation de la table evenement recupéré avec succés');
           res.json(results);
         }
       });
   });
-  // selection d'une card suivant id
-  router.get("/cards/:id", (req, res) => {
-    const idCardsOne = parseInt(req.params.id);
-    const sql = "SELECT * FROM cards WHERE id = ? ";
-    connection.query(sql, idCardsOne, (error, results, fields) => {
+  // selection d'un evenement suivant id
+  router.get("/evenement/:id", (req, res) => {
+    const idEvenementOne = parseInt(req.params.id);
+    const sql = "SELECT * FROM evenement WHERE id = ? ";
+    connection.query(sql, idEvenementOne, (error, results, fields) => {
       if (error) {
         res.status(501).send("couldn't get blog");
         console.log('Dommage!');
       } else {
-        console.log("selection d'une card suivant id recupéré avec succés");
+        console.log("selection d'un evenement suivant id recupéré avec succés");
         res.json(results);
       }
     });
   });
-  //creation d'une card
-  router.post("/cards", (req, res) => {
-    const cards = req.body;
-    const sql = `INSERT INTO cards (titre, liens, alt, text) VALUES ("${cards.titre}", "${cards.liens}", "${cards.alt}", "${cards.text}" )`;
+  //creation d'un evenement
+  router.post("/evenement", (req, res) => {
+    const evenement = req.body;
+    const sql = `INSERT INTO evenement (name, photo, alt, artiste, date, description, nombre) VALUES ("${evenement.name}", "${evenement.photo}", "${evenement.alt}", "${evenement.artiste}" , "${evenement.date}", "${evenement.description}" , "${evenement.nombre}" )`;
     connection.query(sql, (error, results, fields) => {
       if (error) {
-        res.status(501).send("couldn't post card" + error);
+        res.status(501).send("couldn't post evenement" + error);
         console.log('Dommage!');
       } else {
         req.body.id = results.insertId;
         res.json(req.body);
-        console.log("creation d'une card avec succés");
+        console.log("creation d'un evenement avec succés");
       }
     });
   });
 
-  // Modification d'une card
-  router.put("/cards/:id", (req, res) => {
-    const idCards = req.params.id;
-    const cards = req.body;
+  // Modification d'un evenement
+  router.put("/evenement/:id", (req, res) => {
+    const idEvenement = req.params.id;
+    const evenement = req.body;
     connection.query(
-      "UPDATE cards SET ? WHERE id=?",
-      [cards, idCards],
+      "UPDATE evenement SET ? WHERE id=?",
+      [evenement, idEvenement],
       (error, results, fields) => {
         if (error) {
-          res.status(501).send("couldn't put card" + error);
+          res.status(501).send("couldn't put evenement" + error);
           console.log('Dommage!');
         } else {
           res.json(req.body);
-          console.log("update d'une card avec succés");
+          console.log("update d'un evenement avec succés");
         }
       }
     );
   });
 
-  //Suppression d'une card suivant l'id
-  router.delete("/cards/:id", (req, res) => {
-    const idCards = req.params.id;
+  //Suppression d'un evenement suivant l'id
+  router.delete("/evenement/:id", (req, res) => {
+    const idEvenement = req.params.id;
     connection.query(
-      "DELETE FROM cards WHERE id= ?",
-      [idCards],
+      "DELETE FROM evenement WHERE id= ?",
+      [idEvenement],
       (error, results, fields) => {
         if (error) {
-          res.status(501).send("couldn't delete cards" + error);
+          res.status(501).send("couldn't delete evenement" + error);
           console.log('Dommage!');
         } else {
           res.json(idCards);
-          console.log("suppression d'une card avec succés");
+          console.log("suppression d'un evenement avec succés");
         }
       }
     );
