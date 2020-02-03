@@ -10,8 +10,8 @@ router.use(parser.urlencoded({
 }));
 
 //récupération de l'intégralité de la Table evenement
-router.get('/evenement', (req, res) => {
-    connection.query('SELECT * FROM evenement',
+router.get('/event', (req, res) => {
+    connection.query('SELECT * FROM event',
       (err, results) => {
         if (err) {
           console.log('Dommage!');
@@ -22,9 +22,9 @@ router.get('/evenement', (req, res) => {
       });
   });
   // selection d'un evenement suivant id
-  router.get("/evenement/:id", (req, res) => {
+  router.get("/event/:id", (req, res) => {
     const idEvenementOne = parseInt(req.params.id);
-    const sql = "SELECT * FROM evenement WHERE id = ? ";
+    const sql = "SELECT * FROM event WHERE id = ? ";
     connection.query(sql, idEvenementOne, (error, results, fields) => {
       if (error) {
         res.status(501).send("couldn't get blog");
@@ -36,9 +36,9 @@ router.get('/evenement', (req, res) => {
     });
   });
   //creation d'un evenement
-  router.post("/evenement", (req, res) => {
+  router.post("/event", (req, res) => {
     const evenement = req.body;
-    const sql = `INSERT INTO evenement (name, photo, alt, artiste, date, description, nombre) VALUES ("${evenement.name}", "${evenement.photo}", "${evenement.alt}", "${evenement.artiste}" , "${evenement.date}", "${evenement.description}" , "${evenement.nombre}" )`;
+    const sql = `INSERT INTO event (name, photo, alt, artiste, date, description, nombre) VALUES ("${evenement.name}", "${evenement.photo}", "${evenement.alt}", "${evenement.artiste}" , "${evenement.date}", "${evenement.description}" , "${evenement.nombre}" )`;
     connection.query(sql, (error, results, fields) => {
       if (error) {
         res.status(501).send("couldn't post evenement" + error);
@@ -52,11 +52,11 @@ router.get('/evenement', (req, res) => {
   });
 
   // Modification d'un evenement
-  router.put("/evenement/:id", (req, res) => {
+  router.put("/event/:id", (req, res) => {
     const idEvenement = req.params.id;
     const evenement = req.body;
     connection.query(
-      "UPDATE evenement SET ? WHERE id=?",
+      "UPDATE event SET ? WHERE id=?",
       [evenement, idEvenement],
       (error, results, fields) => {
         if (error) {
@@ -71,10 +71,10 @@ router.get('/evenement', (req, res) => {
   });
 
   //Suppression d'un evenement suivant l'id
-  router.delete("/evenement/:id", (req, res) => {
+  router.delete("/event/:id", (req, res) => {
     const idEvenement = req.params.id;
     connection.query(
-      "DELETE FROM evenement WHERE id= ?",
+      "DELETE FROM event WHERE id= ?",
       [idEvenement],
       (error, results, fields) => {
         if (error) {

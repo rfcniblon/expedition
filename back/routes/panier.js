@@ -9,80 +9,80 @@ router.use(parser.urlencoded({
     extended:true
 }));
 
-//récupération de l'intégralité de la Table cards
-router.get('/cards', (req, res) => {
-    connection.query('SELECT * FROM cards',
+//récupération de l'intégralité de la Table panier
+router.get('/panier', (req, res) => {
+    connection.query('SELECT * FROM panier',
       (err, results) => {
         if (err) {
           console.log('Dommage!');
         } else {
-          console.log('Recuperation de la table cards recupéré avec succés');
+          console.log('Recuperation de la table panier recupéré avec succés');
           res.json(results);
         }
       });
   });
-  // selection d'une card suivant id
-  router.get("/cards/:id", (req, res) => {
-    const idCardsOne = parseInt(req.params.id);
-    const sql = "SELECT * FROM cards WHERE id = ? ";
-    connection.query(sql, idCardsOne, (error, results, fields) => {
+  // selection d'unepanier suivant id
+  router.get("/panier/:id", (req, res) => {
+    const idPanierOne = parseInt(req.params.id);
+    const sql = "SELECT * FROM panier WHERE id = ? ";
+    connection.query(sql, idPanierOne, (error, results, fields) => {
       if (error) {
         res.status(501).send("couldn't get blog");
         console.log('Dommage!');
       } else {
-        console.log("selection d'une card suivant id recupéré avec succés");
+        console.log("selection d'un panier suivant id recupéré avec succés");
         res.json(results);
       }
     });
   });
-  //creation d'une card
-  router.post("/cards", (req, res) => {
-    const cards = req.body;
-    const sql = `INSERT INTO cards (titre, liens, alt, text) VALUES ("${cards.titre}", "${cards.liens}", "${cards.alt}", "${cards.text}" )`;
+  //creation d'un panier
+  router.post("/panier", (req, res) => {
+    const panier = req.body;
+    const sql = `INSERT INTO panier (id_users, id_evenement) VALUES ("${panier.id_users}", "${panier.id_evenement}" )`;
     connection.query(sql, (error, results, fields) => {
       if (error) {
-        res.status(501).send("couldn't post card" + error);
+        res.status(501).send("couldn't post panier" + error);
         console.log('Dommage!');
       } else {
         req.body.id = results.insertId;
         res.json(req.body);
-        console.log("creation d'une card avec succés");
+        console.log("creation d'un panier avec succés");
       }
     });
   });
 
-  // Modification d'une card
-  router.put("/cards/:id", (req, res) => {
-    const idCards = req.params.id;
-    const cards = req.body;
+  // Modification d'un panier
+  router.put("/panier/:id", (req, res) => {
+    const idPanier = req.params.id;
+    const panier = req.body;
     connection.query(
-      "UPDATE cards SET ? WHERE id=?",
-      [cards, idCards],
+      "UPDATE panier SET ? WHERE id=?",
+      [panier, idPanier],
       (error, results, fields) => {
         if (error) {
-          res.status(501).send("couldn't put card" + error);
+          res.status(501).send("couldn't put panier" + error);
           console.log('Dommage!');
         } else {
           res.json(req.body);
-          console.log("update d'une card avec succés");
+          console.log("update d'une panier avec succés");
         }
       }
     );
   });
 
-  //Suppression d'une card suivant l'id
-  router.delete("/cards/:id", (req, res) => {
-    const idCards = req.params.id;
+  //Suppression d'un panier suivant l'id
+  router.delete("/panier/:id", (req, res) => {
+    const idPanier = req.params.id;
     connection.query(
-      "DELETE FROM cards WHERE id= ?",
-      [idCards],
+      "DELETE FROM panier WHERE id= ?",
+      [idPanier],
       (error, results, fields) => {
         if (error) {
-          res.status(501).send("couldn't delete cards" + error);
+          res.status(501).send("couldn't delete panier" + error);
           console.log('Dommage!');
         } else {
-          res.json(idCards);
-          console.log("suppression d'une card avec succés");
+          res.json(idPanier);
+          console.log("suppression d'un panier avec succés");
         }
       }
     );
