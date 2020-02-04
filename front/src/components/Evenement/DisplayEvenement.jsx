@@ -24,7 +24,7 @@ class DisplayEvents extends React.Component {
                 
                 <div className="block-event">
                     <div className="title-center">
-                        <strong className="title-event">Nos Evenements</strong>
+                        <strong className="title-event">Nos Evénements</strong>
                     </div>                                                                                    
                     <div className="row wi-12 max-wi-1000 justify-content-center">
                         {this.state.events.map((event) => (
@@ -42,9 +42,7 @@ class DisplayEvents extends React.Component {
                         ))}
                     </div>
                 </div>
-                <div className="sticky-footer">
-                   
-                </div>
+             
             </div >
         )
     }

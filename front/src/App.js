@@ -37,21 +37,21 @@ class App extends React.Component {
         <Navbar />
         <Switch>
 
-          <Route exact path="/" component={DisplayDashboard} /> 
+          <Route exact path="/" component={DisplayDashboard} />
+          <Route exact path="/emplacement" component={Emplacement} />
 
-        <Route exact path="/" component={Dashboard} /> 
-        <Route exact path="/emplacement" component={Emplacement} />
-
-          <Route exact path="/panier" component={Panier} /> 
-          <Route path="/evenement" component={DisplayEvent} /> 
+          <Route exact path="/panier" component={Panier} />
+          <Route path="/evenement" component={DisplayEvent} />
           <Route path="/contact" component={Contact} />
           <Route path="/admin" component={AdminPage} />
           {/* <Route path="/login" component={Login} /> */}
           {/* <Route path="/admin" component={AdminPage} /> */}
-           <Route exact path="/login" component={() => <Login updateFunction={this.updateLogin} />} /> 
-          {isLogged ? <Route exact path="/admin" component={AdminPage} /> : <Redirect to="/" />} 
+          <Route exact path="/login" component={() => <Login updateFunction={this.updateLogin} />} />
+          {isLogged ? <Route exact path="/admin" component={AdminPage} /> : <Redirect to="/" />}
         </Switch>
-        <Footer/>
+       
+          <Footer />
+ 
       </>
     )
   }
