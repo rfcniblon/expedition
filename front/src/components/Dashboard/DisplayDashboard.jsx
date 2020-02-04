@@ -13,17 +13,17 @@ class DisplayDashboard extends React.Component {
 
     }
     componentDidMount = () => {
-        fetch(SERVER_ADDRESS + '/event')
+        fetch(SERVER_ADDRESS + '/events')
             .then(res => res.json())
             .then(res => this.setState({ events: res }))
     }
     render() {
         return (
             <div className="blabla">
-                    <div className="rainbow row wi-12 max-wi-1000 justify-content-center">
+                <div className="rainbow row wi-12 max-wi-1000 justify-content-center">
 
 
-                <h1 className="centre_titre">
+                    <h1 className="centre_titre">
                         <span className="rainbow">T</span>
                         <span className="rainbow">h</span>
                         <span className="rainbow">e</span>
@@ -43,20 +43,22 @@ class DisplayDashboard extends React.Component {
                         <span className="rainbow">E</span>
                         <span className="rainbow">D</span>
                     </h1>
-                        {this.state.events.map((event) => (
-                            <Events
-                                name={event.name}
-                                photo={event.photo}
-                                alt={event.alt}
-                                artiste={event.artiste}
-                                date={event.date}
-                                description={event.description}
-                                nombre={event.nombre}
-                            />
-                        ))}
-                    </div>
+
+                    <span className="centre-span">Les plus populaire :</span>
+                    {this.state.events.slice(0,3).map((event) => (
+                        <Events
+                            name={event.name}
+                            photo={event.photo}
+                            alt={event.alt}
+                            artiste={event.artiste}
+                            date={event.date}
+                            description={event.description}
+                            nombre={event.nombre}
+                        />
+                    ))}
                 </div>
-               
+            </div>
+
         );
     }
 }

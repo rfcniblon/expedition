@@ -7,14 +7,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     vertical-align: baseline;
     font-family: 'Nunito', sans-serif;
     cursor: url(http://cur.cursors-4u.net/nature/nat-2/nat120.cur), auto !important;
-
 }
 
 .bla a {
     color: white;
 }
-
-
 
 /* header */
 
@@ -32,11 +29,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     -webkit-box-shadow: 10px 30px 50px 0px #9aff99;
     -o-box-shadow: 10px 30px 50px 0px #9aff99;
     box-shadow: 10px 30px 50px 0px #9aff99;
-    filter:progid:DXImageTransform.Microsoft.Shadow(color=#9aff99, Direction=161, Strength=50);
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#9aff99, Direction=161, Strength=50);
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    
 }
 
 .headers {
@@ -62,7 +58,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 .headers li a:hover {
     color: red;
-    background-color: yellow;
     
 }
 
@@ -89,17 +84,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     transition: max-height .2s ease-out;
     text-align: center;
     position: relative;
-    
 }
 
-.rasta{
+.rasta {
     width: 70px;
     height: 60px;
     border-radius: 50%;
 }
-.menu{
-    bottom: 10px;
-}
+
+
 
 /* menu icon */
 
@@ -169,15 +162,18 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 @media (min-width: 992px) {
     .headers li {
         float: left;
+        height: 70px;
     }
     .headers li a {
-        padding: 20px 30px;
-        
+        padding: 20px ;
     }
     .headers .menu {
+        display: flex;
         clear: none;
         float: right;
         max-height: none;
+        height: 70px;
+        align-items: center;
     }
     .headers .menu-icon {
         display: none;
@@ -194,7 +190,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     .headers .brand {
         display: none;
     }
-
     .dispa {
         margin-left: 15px;
     }
@@ -204,7 +199,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     .header .menu a {
         font-size: 1.5em;
     }
-   
     .dispa {
         margin-left: 15px;
     }
