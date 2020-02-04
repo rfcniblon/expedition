@@ -12,7 +12,7 @@ const salt = "$2a$10$5UTQoU4Fh6.7oHE7Qyn6Vu";
 const contact = require("./routes/contact");
 const users = require("./routes/users");
 const panier = require("./routes/panier");
-const event = require("./routes/event");
+const events = require("./routes/events");
 
 
 app.use(parser.json());
@@ -25,7 +25,7 @@ app.use(parser.urlencoded({
 app.use("/", users);
 app.use("/", contact);
 app.use("/", panier);
-app.use("/", event);
+app.use("/", events);
 // home page
 app.get(
     "/",

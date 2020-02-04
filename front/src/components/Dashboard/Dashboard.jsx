@@ -15,7 +15,7 @@ class Dashboard extends Component {
 
     }
 componentDidMount = () => {
-            fetch(SERVER_ADDRESS + '/event')
+            fetch(SERVER_ADDRESS + '/events')
                 .then(res => res.json())
                 .then(res => this.setState({ events: res }))
         }
@@ -57,8 +57,10 @@ componentDidMount = () => {
                                 alt={event.alt}
                                 artiste={event.artiste}
                                 date={event.date}
+                                heure={event.heure}
                                 description={event.description}
                                 nombre={event.nombre}  
+                                prix={event.prix}  
                             />
                         ))}
                     </div>

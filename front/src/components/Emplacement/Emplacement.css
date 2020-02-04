@@ -1,0 +1,23 @@
+.fond{
+    height: 1000px;
+    width: 1550px;
+    color: green;
+    background-color: yellow;
+}
+.table{
+    border: 2px;
+    border-color: solid 2px black;
+    margin-left: 10px;
+}
+.bouton_tableau{
+    height: 30px;
+    width: 90px;
+}
+.checkbox{
+height: 40px;
+width: 40px;
+}
+.select{
+    height: 80px;
+    width: 80px;
+}

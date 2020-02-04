@@ -2,12 +2,13 @@ import React from 'react';
 import { Switch, Route, Redirect } from "react-router-dom";
 import DisplayEvent from "./components/Evenement/DisplayEvenement";
 import Login from './components/Admin/Login';
-import Navbar from './components/Navbar/Navbar'
+import Navbar from './components/Navbar/Navbar';
 import Panier from './components/Panier/Panier';
 import AdminPage from './components/Admin/AdminPage';
 import Contact from "./components/Contact/Contact";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Footer from "./components/Footer/Footer";
+import Emplacement from "./components/Emplacement/Emplacement";
 
 class App extends React.Component {
   constructor(props) {
@@ -36,6 +37,7 @@ class App extends React.Component {
         <Navbar />
         <Switch>
         <Route exact path="/" component={Dashboard} /> 
+        <Route exact path="/emplacement" component={Emplacement} />
           <Route exact path="/panier" component={Panier} /> 
           <Route path="/evenement" component={DisplayEvent} /> 
           <Route path="/contact" component={Contact} />

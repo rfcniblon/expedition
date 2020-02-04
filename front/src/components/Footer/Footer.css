@@ -3,7 +3,6 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
     color: white;
     text-align: center;
 
@@ -14,6 +13,8 @@
 }
 
 .color-footer{
+  margin-left: -245px;
    background-color: red; 
+   width: 1580px;
 
 }
