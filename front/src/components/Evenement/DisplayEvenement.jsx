@@ -1,8 +1,6 @@
 import React from "react";
-// import Navbar from '../accueil/navbar/Navbar';
-// import Footer from '../accueil/footer/Footer';
 import Events from "./Evenement/Evenement"
-// import "./body.css";
+
 
 const SERVER_ADDRESS = process.env.REACT_APP_SERVER_ADDRESS;
 
