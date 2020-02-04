@@ -13,7 +13,7 @@ class DisplayEvents extends React.Component {
     }
 
     componentDidMount = () => {
-        fetch(SERVER_ADDRESS + '/event')
+        fetch(SERVER_ADDRESS + '/events')
             .then(res => res.json())
             .then(res => this.setState({ events: res }))
     }
@@ -34,8 +34,10 @@ class DisplayEvents extends React.Component {
                                 alt={event.alt}
                                 artiste={event.artiste}
                                 date={event.date}
+                                heure={event.heure}
                                 description={event.description}
-                                nombre={event.nombre}  
+                                nombre={event.nombre} 
+                                prix={event.prix}
                             />
                         ))}
                     </div>

@@ -9,7 +9,7 @@ class Footer extends Component {
     render() {
         return (
 
-		<div className="container row" id="footer">
+		<div className="container largeur_footer " id="footer">
 			<div className="row text-center color-footer text-xs-center text-sm-left text-md-left">
 				<div className="col-xs-12 col-sm-4 col-md-4">
 					<h5>Quick links</h5>

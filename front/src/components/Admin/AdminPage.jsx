@@ -37,7 +37,7 @@ import {
 } from '@material-ui/icons';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import blue from '@material-ui/core/colors/blue';
-// import Bureau from './Bureau/Bureau';
+import Evenement from './Evenement/Evenement';
 // import Actualites from './Actualites/Actualites';
 // import Partenaires from './Partenaires/Partenaires';
 // import Accueil from './Accueil/Accueil';
@@ -349,7 +349,7 @@ class AdminPage extends React.Component {
           <div>
             <div className="side-nav">
               <div className="logo">
-                <span>Hermand Phillipe Géomètre</span>
+              
               </div>
               <nav>
                 <ul>
@@ -429,9 +429,9 @@ class AdminPage extends React.Component {
                   </Card>
                 </Paper>
               </Grid>
-
+<Evenement />
               {/* <Bureau />
-              <Actualites />
+              
               <Partenaires />
               <Accueil />
               <Apropos /> */}

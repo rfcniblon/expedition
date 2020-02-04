@@ -10,7 +10,7 @@ describe(
         beforeAll(
             (done) => {
                 server = require("../server");
-                request.get("http://localhost:3000/", (error, response, body) => {
+                request.get("http://localhost:3001/", (error, response, body) => {
                     data.status = response.statusCode;
                     data.body = body;
                     done();
