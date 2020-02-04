@@ -1,126 +1,273 @@
 body {
-    color: white;
-    font-weight: 700;
-    font-size: 20px;
-    text-align: center;
-    cursor: crosshair;
-    letter-spacing: 5;
-    }
-    
-    /*This is coded CSS rainbow*/
-    
-    .rainbow:hover {
-    -webkit-animation:rainbow 1s infinite;
-    -ms-animation:rainbow 1s infinite;
-    -o-animation:rainbow 1s infinite;
-    animation:rainbow 1s infinite;
-    }
-    @-webkit-keyframes rainbow {
-    0% {color: #ff0000;}
-    10% {color: #ff8000;}
-    20% {color: #ffff00;}
-    30% {color: #80ff00;}
-    40% {color: #00ff00;}
-    50% {color: #00ff80;}
-    60% {color: #00ffff;}
-    70% {color: #0080ff;}
-    80% {color: #0000ff;}
-    90% {color: #8000ff;}
-    100% {color: #ff0080;}
-    }
-    @-ms-keyframes rainbow {
-    0% {color: #ff0000;}
-    10% {color: #ff8000;}
-    20% {color: #ffff00;}
-    30% {color: #80ff00;}
-    40% {color: #00ff00;}
-    50% {color: #00ff80;}
-    60% {color: #00ffff;}
-    70% {color: #0080ff;}
-    80% {color: #0000ff;}
-    90% {color: #8000ff;}
-    100% {color: #ff0080;}
-    }
-    @-o-keyframes rainbow {
-    0% {color: #ff0000;}
-    10% {color: #ff8000;}
-    20% {color: #ffff00;}
-    30% {color: #80ff00;}
-    40% {color: #00ff00;}
-    50% {color: #00ff80;}
-    60% {color: #00ffff;}
-    70% {color: #0080ff;}
-    80% {color: #0000ff;}
-    90% {color: #8000ff;}
-    100% {color: #ff0080;}
-    }
-    @keyframes rainbow {
-    0% {color: #ff0000;}
-    10% {color: #ff8000;}
-    20% {color: #ffff00;}
-    30% {color: #80ff00;}
-    40% {color: #00ff00;}
-    50% {color: #00ff80;}
-    60% {color: #00ffff;}
-    70% {color: #0080ff;}
-    80% {color: #0000ff;}
-    90% {color: #8000ff;}
-    100% {color: #ff0080;}
-    }
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  cursor: crosshair;
+  letter-spacing: 5;
+}
 
-    h1 span {
-        position: relative;
-        top: 20px;
-        display: inline-block;
-        animation: bounce .3s ease infinite alternate;
-        font-family: 'Titan One', cursive;
-        font-size: 80px;
-        color: #FFF;
-        text-shadow: 0 1px 0 #CCC,
-                     0 2px 0 #CCC,
-                     0 3px 0 #CCC,
-                     0 4px 0 #CCC,
-                     0 5px 0 #CCC,
-                     0 6px 0 transparent,
-                     0 7px 0 transparent,
-                     0 8px 0 transparent,
-                     0 9px 0 transparent,
-                     0 10px 10px rgba(0, 0, 0, .4);
-      }
-      
-      h1 span:nth-child(2) { animation-delay: .1s; }
-      h1 span:nth-child(3) { animation-delay: .2s; }
-      h1 span:nth-child(4) { animation-delay: .3s; }
-      h1 span:nth-child(5) { animation-delay: .4s; }
-      h1 span:nth-child(6) { animation-delay: .5s; }
-      h1 span:nth-child(7) { animation-delay: .6s; }
-      h1 span:nth-child(8) { animation-delay: .7s; }
-      h1 span:nth-child(9) { animation-delay: .8s; }
-      h1 span:nth-child(10) { animation-delay: .9s; }
-      h1 span:nth-child(11) { animation-delay: .1s; }
-      h1 span:nth-child(12) { animation-delay: .1s; }
-      h1 span:nth-child(13) { animation-delay: .3s; }
-      h1 span:nth-child(14) { animation-delay: .4s; }
-      h1 span:nth-child(15) { animation-delay: .5s; }
-      h1 span:nth-child(16) { animation-delay: .3s; }
-      h1 span:nth-child(17) { animation-delay: .4s; }
-      h1 span:nth-child(18) { animation-delay: .5s; }
-      
-      @keyframes bounce {
-        100% {
-          top: -20px;
-          text-shadow: 0 1px 0 #CCC,
-                       0 2px 0 #CCC,
-                       0 3px 0 #CCC,
-                       0 4px 0 #CCC,
-                       0 5px 0 #CCC,
-                       0 6px 0 #CCC,
-                       0 7px 0 #CCC,
-                       0 8px 0 #CCC,
-                       0 9px 0 #CCC,
-                       0 50px 25px rgba(0, 0, 0, .2);
-        }
-      }
+/*This is coded CSS rainbow*/
+.rainbow{
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+}
 
+.div_img_part img{
 
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
 
+}
+
+.block-evenement-mid{
+  padding: 15px;
+  margin-top: 10%;
+}
+
+.rainbow:hover {
+  -webkit-animation: rainbow 1s infinite;
+  -ms-animation: rainbow 1s infinite;
+  -o-animation: rainbow 1s infinite;
+  animation: rainbow 1s infinite;
+}
+
+@-webkit-keyframes rainbow {
+  0% {
+    color: #ff0000;
+  }
+  10% {
+    color: #ff8000;
+  }
+  20% {
+    color: #ffff00;
+  }
+  30% {
+    color: #80ff00;
+  }
+  40% {
+    color: #00ff00;
+  }
+  50% {
+    color: #00ff80;
+  }
+  60% {
+    color: #00ffff;
+  }
+  70% {
+    color: #0080ff;
+  }
+  80% {
+    color: #0000ff;
+  }
+  90% {
+    color: #8000ff;
+  }
+  100% {
+    color: #ff0080;
+  }
+}
+
+@-ms-keyframes rainbow {
+  0% {
+    color: #ff0000;
+  }
+  10% {
+    color: #ff8000;
+  }
+  20% {
+    color: #ffff00;
+  }
+  30% {
+    color: #80ff00;
+  }
+  40% {
+    color: #00ff00;
+  }
+  50% {
+    color: #00ff80;
+  }
+  60% {
+    color: #00ffff;
+  }
+  70% {
+    color: #0080ff;
+  }
+  80% {
+    color: #0000ff;
+  }
+  90% {
+    color: #8000ff;
+  }
+  100% {
+    color: #ff0080;
+  }
+}
+
+@-o-keyframes rainbow {
+  0% {
+    color: #ff0000;
+  }
+  10% {
+    color: #ff8000;
+  }
+  20% {
+    color: #ffff00;
+  }
+  30% {
+    color: #80ff00;
+  }
+  40% {
+    color: #00ff00;
+  }
+  50% {
+    color: #00ff80;
+  }
+  60% {
+    color: #00ffff;
+  }
+  70% {
+    color: #0080ff;
+  }
+  80% {
+    color: #0000ff;
+  }
+  90% {
+    color: #8000ff;
+  }
+  100% {
+    color: #ff0080;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    color: #ff0000;
+  }
+  10% {
+    color: #ff8000;
+  }
+  20% {
+    color: #ffff00;
+  }
+  30% {
+    color: #80ff00;
+  }
+  40% {
+    color: #00ff00;
+  }
+  50% {
+    color: #00ff80;
+  }
+  60% {
+    color: #00ffff;
+  }
+  70% {
+    color: #0080ff;
+  }
+  80% {
+    color: #0000ff;
+  }
+  90% {
+    color: #8000ff;
+  }
+  100% {
+    color: #ff0080;
+  }
+}
+
+h1 span {
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  animation: bounce .3s ease infinite alternate;
+  font-family: 'Titan One', cursive;
+  font-size: 55px;
+  color: #FFF;
+  text-shadow: 0 1px 0 #CCC, 0 2px 0 #CCC, 0 3px 0 #CCC, 0 4px 0 #CCC, 0 5px 0 #CCC, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, .4);
+}
+
+h1 span:nth-child(2) {
+  animation-delay: .1s;
+}
+
+h1 span:nth-child(3) {
+  animation-delay: .2s;
+}
+
+h1 span:nth-child(4) {
+  animation-delay: .3s;
+}
+
+h1 span:nth-child(5) {
+  animation-delay: .4s;
+}
+
+h1 span:nth-child(6) {
+  animation-delay: .5s;
+}
+
+h1 span:nth-child(7) {
+  animation-delay: .6s;
+}
+
+h1 span:nth-child(8) {
+  animation-delay: .7s;
+}
+
+h1 span:nth-child(9) {
+  animation-delay: .8s;
+}
+
+h1 span:nth-child(10) {
+  animation-delay: .9s;
+}
+
+h1 span:nth-child(11) {
+  animation-delay: .1s;
+}
+
+h1 span:nth-child(12) {
+  animation-delay: .1s;
+}
+
+h1 span:nth-child(13) {
+  animation-delay: .3s;
+}
+
+h1 span:nth-child(14) {
+  animation-delay: .4s;
+}
+
+h1 span:nth-child(15) {
+  animation-delay: .5s;
+}
+
+h1 span:nth-child(16) {
+  animation-delay: .3s;
+}
+
+h1 span:nth-child(17) {
+  animation-delay: .4s;
+}
+
+h1 span:nth-child(18) {
+  animation-delay: .5s;
+}
+
+@keyframes bounce {
+  100% {
+    top: -20px;
+    text-shadow: 0 1px 0 #CCC, 0 2px 0 #CCC, 0 3px 0 #CCC, 0 4px 0 #CCC, 0 5px 0 #CCC, 0 6px 0 #CCC, 0 7px 0 #CCC, 0 8px 0 #CCC, 0 9px 0 #CCC, 0 50px 25px rgba(0, 0, 0, .2);
+  }
+}
+
+.centre_titre {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5%;
+}

@@ -6,7 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import Panier from './components/Panier/Panier';
 import AdminPage from './components/Admin/AdminPage';
 import Contact from "./components/Contact/Contact";
-import Dashboard from "./components/Dashboard/Dashboard";
+import DisplayDashboard from "./components/Dashboard/DisplayDashboard";
 import Footer from "./components/Footer/Footer";
 import Emplacement from "./components/Emplacement/Emplacement";
 
@@ -36,8 +36,12 @@ class App extends React.Component {
         {redirectToAdminPage && <Redirect to="/admin" />}
         <Navbar />
         <Switch>
+
+          <Route exact path="/" component={DisplayDashboard} /> 
+
         <Route exact path="/" component={Dashboard} /> 
         <Route exact path="/emplacement" component={Emplacement} />
+
           <Route exact path="/panier" component={Panier} /> 
           <Route path="/evenement" component={DisplayEvent} /> 
           <Route path="/contact" component={Contact} />
